@@ -5,7 +5,7 @@ interface Props {
   title: string;
   handlePress: () => void;
   containerStyle: string;
-  textStyles: string;
+  textStyles?: string;
   isLoading: boolean;
 };
 const CustomButton = ({title, handlePress, containerStyle, isLoading, textStyles}: Props) => {

@@ -7,9 +7,10 @@ import {icons} from '../constants'
 interface Props {
   title: string;
   value: string;
-  handleChangeText: () => void;
-  placeholder: string;
+  handleChangeText: (text: string) => void;
+  placeholder?: string;
   otherStyles: string;
+  keyboardType?: string;
 };
 
 const FormField = ({ title, value, placeholder, handleChangeText, otherStyles, ...props}: Props) => {

@@ -11,12 +11,13 @@ import CustomButton from '@/components/customButton'
 import { createUser } from '../../lib/appwrite'
 
 
+
 const SignUp = () => {
   const [isSubmitting, setisSubmitting] = useState(false)
   const [form, setForm] = useState({
-    username: '',
-    email: '',
-    password: '',
+    username: "",
+    email: "",
+    password: "",
 })
 
   const submit = async () => {
@@ -27,10 +28,11 @@ const SignUp = () => {
     setisSubmitting(true);
     try {
       const result = await createUser(form.email, form.password, form.username)
-      router.replace('/home')
+      router.replace("/home")
 
     } catch (error) {
-      Alert.alert('Error', error.message)
+      const err = error as Error
+      Alert.alert('Error', err.message)
       
     } finally {
       setisSubmitting(false)
