@@ -33,11 +33,12 @@ const SignUp = () => {
     } catch (error) {
       const err = error as Error
       Alert.alert('Error', err.message)
+      router.replace("/home")
       
     } finally {
       setisSubmitting(false)
     }
-    createUser();
+    
   }
 
   return (
