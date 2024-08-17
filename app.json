@@ -17,7 +17,7 @@
       "adaptiveIcon": {
         "backgroundColor": "#ffffff"
       },
-      "package": "com.jsm.aoraApp"
+      "package": "com.app.aora"
     },
     "web": {
       "bundler": "metro",

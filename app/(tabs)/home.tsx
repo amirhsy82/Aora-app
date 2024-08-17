@@ -7,7 +7,7 @@ const Home = () => {
     <SafeAreaView>
       <FlatList
         data={[{ id:1 }, { id:2 }, { id:3 }]}
-        keyExtractor={(item) => item.$id}
+        keyExtractor={(item) => item.id.toString()} //used 'id' instead of '$id'*
         renderItem={({item}) => (
           <Text className='text-3xl'>{item.id}</Text>
         )}
