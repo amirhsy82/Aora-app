@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { 
   View, 
   Text, 
@@ -16,6 +16,16 @@ import Trending from '@/components/Trending'
 import EmptyState from '@/components/EmptyState'
 
 const Home = () => {
+  const [data, setData] = useState([])
+  const [isLoading, setisLoading] = useState(true)
+
+  useEffect(() => {
+    const fetchData = async () => {
+
+    }
+
+    fetchData
+  }, []);
   const [refreshing, setRefreshing] = useState(false)
 
   const onRefresh = async () => {
