@@ -41,7 +41,7 @@ interface TrendingItemProps {
 
 const TrendingItem: React.FC<TrendingItemProps> = ({activeItem, item }) => {
   const [play, setPlay] = useState(false)
-  console.log(activeItem)
+
   return (
 
     <Animatable.View 
