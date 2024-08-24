@@ -6,12 +6,8 @@ import {icons} from '../constants'
 import { router, usePathname } from 'expo-router';
 
 
-interface Props {
-  initialQuery: string
-}
 
-
-const SearchInput= ({ initialQuery }: Props) => {
+const SearchInput= ({ initialQuery }) => {
 
   const pathname = usePathname()
   const [query, setQuery] = useState(initialQuery ||'')
