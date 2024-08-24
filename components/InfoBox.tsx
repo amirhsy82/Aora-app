@@ -1,7 +1,14 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-const InfoBox = ( { title, subtitle, containerStyles, titleStyles}) => {
+interface Props{
+  title: string | number
+  subtitle?: string
+  containerStyles?:string
+  titleStyles?:string
+}
+
+const InfoBox = ( { title, subtitle, containerStyles, titleStyles}: Props) => {
   return (
     <View className={containerStyles}>
     <Text className={`text-white text-center font-psemibold ${titleStyles}`}>{title}</Text>

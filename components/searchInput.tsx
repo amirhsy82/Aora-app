@@ -5,16 +5,13 @@ import { useState } from 'react';
 import {icons} from '../constants'
 import { router, usePathname } from 'expo-router';
 
-interface Props {
-  title?: string;
-  value?: string;
-  handleChangeText?: (text: string) => void;
-  placeholder?: string;
-  otherStyles?: string;
-  keyboardType?: string;
-};
 
-const SearchInput= ({ initialQuery }) => {
+interface Props {
+  initialQuery: string
+}
+
+
+const SearchInput= ({ initialQuery }: Props) => {
 
   const pathname = usePathname()
   const [query, setQuery] = useState(initialQuery ||'')
